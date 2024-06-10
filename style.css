@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url(/Assets/piotr-chrobot-6oUsyeYXgTg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#main #navbar{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    padding: 30px 100px;
+}
+#main #navbar .nright h3{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    user-select: none;
+}
+#main #navbar .nleft a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+#navbar i{
+    display: none; 
+}
+#navbar .nleft a:nth-child(1){
+    padding: 5px;
+    border-bottom: 3px solid #FFF;
+}
+
+#main #left{
+    padding: 0 80px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.264);
+    position: relative;
+}
+#left .place{
+    color: #FFF;
+    width: 100%;
+}
+.place h4{
+    opacity: .7;
+    display: inline-block;
+    font-weight: 500;
+    border-bottom: 2px solid #FFF;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+}
+.place h6{
+    font-weight: 600;
+    opacity: .8;
+}
+#left .place:nth-child(2) h4{
+    border-bottom: 1px solid #FFF;
+    font-size: 60px;
+    white-space: nowrap;
+    opacity: 1;
+}
+#left .place:nth-child(2) h6{
+    
+    font-size: 30px;
+    white-space: nowrap;
+}
+#left .scroll{
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    position: absolute;
+    gap: 10px;
+    bottom: -20px;
+    left: 50%;
+    transform-origin: 0 50%;
+    transform: translate(-50%,0) rotate(-90deg);
+}
+.scroll .line{
+    width: 100px;
+    height: 2px;
+    background-color: #fff;
+}
+#main #right{
+    width: 75%;
+    height: 100%;
+}
+#right .txt{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    text-align: right;
+    transform: translate(0%,-50%);
+    color: #FFF;
+}
+
+.txt h3{
+    font-size: 40px;
+    line-height:1;
+    font-weight: 400;
+    
+}
+.txt h1{
+    line-height: 1;
+    font-size: 100px;
+}
+
+.txt .input{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 40px;
+    
+}
+.txt input{
+    width: 100%;
+    padding: -9px 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFF;
+    
+
+}
+.txt .input i{
+    font-size: 20px;
+}
+.txt input::placeholder{
+    color: #FFF;
+}
+
+#right small{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    color: #fff;
+}
+
+@media (max-width: 500px) {
+    #main #navbar{
+        /* height: 400px; */
+        padding: 20px 20px;
+    }
+    #navbar .nleft{
+        display: none;
+    }
+    #main #navbar .nright h3{
+        font-size: 18px;
+    }
+    #navbar i{
+        display: initial; 
+        color:#fff;
+    }
+    #main #left{
+        padding: 0 20px;
+        width: 100%;
+        height: 60%;
+    }
+}
